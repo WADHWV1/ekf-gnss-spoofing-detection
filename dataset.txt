@@ -1,0 +1,48 @@
+Dataset Description
+
+This project uses both simulated data and real-world benchmark datasets 
+to evaluate GNSS spoofing detection.
+
+1. KITTI Dataset
+--------------------------------
+The KITTI Vision Benchmark Suite is used as a reference dataset 
+for realistic trajectory modelling.
+
+Source:
+Geiger, A., Lenz, P., and Urtasun, R.,
+“Are we ready for autonomous driving? The KITTI vision benchmark suite,”
+International Journal of Robotics Research (IJRR), 2013.
+
+Description:
+- Provides real-world vehicle trajectories
+- Includes GPS, IMU, and ground-truth pose data
+- Widely used in autonomous navigation research
+
+Usage in this project:
+- Ground truth trajectories are inspired by KITTI motion patterns
+- Used to simulate realistic GNSS measurements
+- Helps improve realism of spoofing experiments
+
+--------------------------------
+
+2. Simulated GNSS Data
+--------------------------------
+Synthetic trajectories are generated using motion models.
+
+GNSS measurements are simulated by:
+- Adding Gaussian noise to ground truth
+- Introducing spoofing bias after a defined time
+
+Spoofing Model:
+- A constant bias is injected into GNSS measurements
+- This simulates realistic spoofing attacks in navigation systems
+
+--------------------------------
+
+Notes
+--------------------------------
+- The KITTI dataset is NOT redistributed in this project
+- Users can download KITTI from:
+  http://www.cvlibs.net/datasets/kitti/
+
+- Synthetic data is used to ensure controlled and reproducible experiments
